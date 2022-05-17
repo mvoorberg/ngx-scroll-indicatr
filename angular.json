@@ -3,5 +3,46 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "ngx-scroll-indicatr": {
+      "projectType": "library",
+      "root": "projects/ngx-scroll-indicatr",
+      "sourceRoot": "projects/ngx-scroll-indicatr/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/ngx-scroll-indicatr/tsconfig.lib.json",
+            "project": "projects/ngx-scroll-indicatr/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-scroll-indicatr/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-scroll-indicatr/src/test.ts",
+            "tsConfig": "projects/ngx-scroll-indicatr/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-scroll-indicatr/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-scroll-indicatr/tsconfig.lib.json",
+              "projects/ngx-scroll-indicatr/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ngx-scroll-indicatr"
 }

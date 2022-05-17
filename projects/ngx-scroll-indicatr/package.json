@@ -1,0 +1,11 @@
+{
+  "name": "ngx-scroll-indicatr",
+  "version": "0.0.2",
+  "peerDependencies": {
+    "@angular/common": ">=6",
+    "@angular/core": ">=6"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}
